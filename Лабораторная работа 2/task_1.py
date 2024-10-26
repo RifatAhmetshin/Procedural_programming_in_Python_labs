@@ -8,7 +8,6 @@ spends = []
 for i in range(months):
     spends.append(spend * (1 + increase) ** i)
 money_capital = sum(spends) - salary * months
-print(money_capital)
 r_money_capital = round(money_capital)
 if r_money_capital >= money_capital:
     money_capital = r_money_capital
