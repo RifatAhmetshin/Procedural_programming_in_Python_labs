@@ -8,8 +8,14 @@ spends = []
 for i in range(months):
     spends.append(spend * (1 + increase) ** i)
 money_capital = sum(spends) - salary * months
+print(money_capital)
+r_money_capital = round(money_capital)
+if r_money_capital >= money_capital:
+    money_capital = r_money_capital
+else:
+    money_capital = r_money_capital + 1
 
 
 
 
-print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:" , round(money_capital))
+print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:" , money_capital)
