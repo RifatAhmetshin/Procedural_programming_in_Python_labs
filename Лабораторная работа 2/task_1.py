@@ -1,3 +1,5 @@
+import math
+
 salary = 5000  # Ежемесячная зарплата
 spend = 6000  # Траты за первый месяц
 months = 10  # Количество месяцев, которое планируется протянуть без долгов
@@ -8,12 +10,8 @@ spends = []
 for i in range(months):
     spends.append(spend * (1 + increase) ** i)
 money_capital = sum(spends) - salary * months
-r_money_capital = round(money_capital)
-if r_money_capital >= money_capital:
-    money_capital = r_money_capital
-else:
-    money_capital = r_money_capital + 1
 
+money_capital = math.ceil(money_capital)
 
 
 
